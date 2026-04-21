@@ -7,6 +7,7 @@ on:
 env:
   DRY_RUN: false
   REPOSITORIES: |
+    # 1.7
     vcmi-mods/horn-of-the-abyss@vcmi-1.7
     vcmi-mods/tides-of-war@vcmi-1.7
     vcmi-mods/wake-of-gods@vcmi-1.7
@@ -18,6 +19,8 @@ env:
     vcmi-mods/lotrd-townscreens@vcmi-1.7
     vcmi-mods/the-lost-tales@vcmi-1.7
     vcmi-mods/h3landscape@vcmi-1.7
+    # 1.8
+    vcmi-mods/horn-of-the-abyss@vcmi-1.8
   
   WORKFLOW_FILES: |
     .github=./
