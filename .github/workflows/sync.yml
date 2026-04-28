@@ -20,6 +20,7 @@ env:
     vcmi-mods/h3landscape@vcmi-1.7
     vcmi-mods/new-interface-mod@vcmi-1.7
     vcmi-mods/reinforcements-spell@vcmi-1.7
+    vcmi-mods/an-expansion@vcmi-1.7
     vcmi-mods/horn-of-the-abyss@vcmi-1.8
   
   WORKFLOW_FILES: |
