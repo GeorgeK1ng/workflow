@@ -13,6 +13,8 @@ jobs:
     defaults:
       run:
         shell: bash
+    outputs:
+      translations_present: ${{ steps.check.outputs.translations_present }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -49,16 +51,27 @@ jobs:
 
       - name: Export translations
         run: |
-          echo '{ "activePreset" : "default", "presets" : { "default" : { "mods" : [ "vcmi", "core", "' ${MOD_NAME} '" ]}}}' >~/.config/vcmi/modSettings.json
-          vcmiserver --translate-mod=${MOD_NAME}
+          if ! jq -e '.modType == "Translation"' mod.json >/dev/null; then
+            echo '{ "activePreset" : "default", "presets" : { "default" : { "mods" : [ "vcmi", "core", "' ${MOD_NAME} '" ]}}}' >~/.config/vcmi/modSettings.json
+            vcmiserver --translate-mod=${MOD_NAME}
+          fi
+
+      - name: Check translations folder
+        id: check
+        run: |
+          DIR="$HOME/.cache/vcmi/extracted/translationFull/${{ env.MOD_NAME }}/"
+          if [ -d "$DIR" ] && [ "$(ls -A "$DIR")" ]; then
+            echo "translations_present=true" >> $GITHUB_OUTPUT
+          else
+            echo "translations_present=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Upload Translation Files
-        if: always()
+        if: steps.check.outputs.translations_present == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: translation-export
           path: ~/.cache/vcmi/extracted/translationFull/${{ env.MOD_NAME }}/
-          if-no-files-found: ignore
           retention-days: 1
 
       - name: Run VCMI
@@ -112,12 +125,14 @@ jobs:
           npm install -g prettier
 
       - name: Download translation artifacts
+        if: needs.validate-startup.outputs.translations_present == 'true'
         uses: actions/download-artifact@v4
         with:
           name: translation-export
           path: ./translation-export
 
       - name: Refresh translation files
+        if: needs.validate-startup.outputs.translations_present == 'true'
         run: |
           mv translation-export ..
           find . -name english.json -delete
