@@ -25,6 +25,7 @@ env:
     vcmi-mods/new-pavilion@vcmi-1.7
     vcmi-mods/ruins-town@vcmi-1.7
     vcmi-mods/horn-of-the-abyss@vcmi-1.8
+    vcmi-mods/new-pavilion@vcmi-1.8
   
   WORKFLOW_FILES: |
     .github=./
