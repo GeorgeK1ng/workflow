@@ -30,6 +30,7 @@ env:
     vcmi-mods/forge2k@vcmi-1.7
     vcmi-mods/asphalt-terrain@vcmi-1.7
     vcmi-mods/hirki-plus-patch@vcmi-1.7
+    vcmi-mods/market-of-time@vcmi-1.7
     vcmi-mods/horn-of-the-abyss@vcmi-1.8
     vcmi-mods/new-pavilion@vcmi-1.8
     vcmi-mods/newtown-terrains@vcmi-1.8
