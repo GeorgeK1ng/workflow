@@ -184,7 +184,6 @@ jobs:
               exit 1
           fi
 
-
   package-artifact:
     name: Create release
     needs: [validate-startup]
