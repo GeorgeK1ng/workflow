@@ -41,6 +41,7 @@ env:
     vcmi-mods/horn-of-the-abyss@vcmi-1.8
     vcmi-mods/new-pavilion@vcmi-1.8
     vcmi-mods/newtown-terrains@vcmi-1.8
+    vcmi-mods/sylvan-town@vcmi-1.8
   
   WORKFLOW_FILES: |
     .github=./
