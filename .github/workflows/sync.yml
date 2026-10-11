@@ -83,6 +83,8 @@ env:
     vcmi-mods/new-pavilion@vcmi-1.8
     vcmi-mods/newtown-terrains@vcmi-1.8
     vcmi-mods/sylvan-town@vcmi-1.8
+    vcmi-mods/lithuanian-translation@vcmi-1.8
+    vcmi-mods/tchinese-translation@vcmi-1.8
   
   # Source ".github" resolves to vcmi-mods/.github, NOT this repo's own ./.github.
   # The sync action checks "<owner>/.github" before a bare ".github", and every
