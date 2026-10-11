@@ -85,6 +85,8 @@ env:
     vcmi-mods/sylvan-town@vcmi-1.8
     vcmi-mods/lithuanian-translation@vcmi-1.8
     vcmi-mods/tchinese-translation@vcmi-1.8
+    vcmi-mods/wake-of-gods@vcmi-1.8
+    vcmi-mods/neutral-heroes@vcmi-1.8
   
   # Source ".github" resolves to vcmi-mods/.github, NOT this repo's own ./.github.
   # The sync action checks "<owner>/.github" before a bare ".github", and every
