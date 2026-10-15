@@ -78,6 +78,17 @@ env:
     vcmi-mods/ab-bad-ending-maps@vcmi-1.7
     vcmi-mods/new-skills-pack@vcmi-1.7
     vcmi-mods/ensrick-portraits@vcmi-1.7
+    vcmi-mods/asylum-town@vcmi-1.7
+    vcmi-mods/death-valley-town@vcmi-1.7
+    vcmi-mods/fairy-town@vcmi-1.7
+    vcmi-mods/h3-themes@vcmi-1.7
+    vcmi-mods/boost-ai@vcmi-1.7
+    vcmi-mods/zefix@vcmi-1.7
+    vcmi-mods/adventure-spells-pack@vcmi-1.7
+    vcmi-mods/fused-artifacts@vcmi-1.7
+    vcmi-mods/cheat-mod@vcmi-1.7
+    vcmi-mods/diverse-battlefields@vcmi-1.7
+    vcmi-mods/the-great-expansion@vcmi-1.7
     vcmi-mods/vcmi-extras@vcmi-1.8
     vcmi-mods/horn-of-the-abyss@vcmi-1.8
     vcmi-mods/new-pavilion@vcmi-1.8
